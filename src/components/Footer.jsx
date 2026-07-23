@@ -17,9 +17,9 @@ export default function Footer({ onNavigatePage }) {
         <div className="footer-copy">
           © 2026 Joeys Picknick. Alle Rechte vorbehalten.
           <span className="footer-credit">
-            Created by{' '}
+            Website by{' '}
             <a href="https://www.achimbenzel.com/de/" target="_blank" rel="noopener noreferrer">
-              Achim
+              Achim Benzel
             </a>
           </span>
         </div>

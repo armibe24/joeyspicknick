@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Check, Download, FileText, Wine, Coffee, Beer } from 'lucide-react';
+import { Download, FileText } from 'lucide-react';
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
 
 export default function MenuPage() {
@@ -133,7 +133,6 @@ export default function MenuPage() {
                         <ul className="menu-card-list">
                           {box.items.map((item, idx) => (
                             <li key={idx}>
-                              <Check size={16} />
                               <span>{item}</span>
                             </li>
                           ))}
@@ -157,7 +156,6 @@ export default function MenuPage() {
             {activeTab === 'drinks' && (
               <div className="drinks-list premium-card fade-in-section is-visible">
                 <h3 className="drinks-category-title serif">
-                  <Coffee size={20} style={{ marginRight: '10px', verticalAlign: 'middle' }} />
                   Alkoholfreie Erfrischungen
                 </h3>
                 {softdrinks.map((drink, idx) => (
@@ -174,7 +172,6 @@ export default function MenuPage() {
                 ))}
 
                 <h3 className="drinks-category-title serif" style={{ marginTop: '4rem' }}>
-                  <Beer size={20} style={{ marginRight: '10px', verticalAlign: 'middle' }} />
                   Bierspezialitäten
                 </h3>
                 {biere.map((beer, idx) => (
@@ -195,7 +192,6 @@ export default function MenuPage() {
             {activeTab === 'weine' && (
               <div className="drinks-list premium-card fade-in-section is-visible">
                 <h3 className="drinks-category-title serif">
-                  <Wine size={20} style={{ marginRight: '10px', verticalAlign: 'middle' }} />
                   Ausgewählte Weißweine
                 </h3>
                 {weissweine.map((wein, idx) => (
@@ -212,7 +208,6 @@ export default function MenuPage() {
                 ))}
 
                 <h3 className="drinks-category-title serif" style={{ marginTop: '4rem' }}>
-                  <Wine size={20} style={{ marginRight: '10px', verticalAlign: 'middle' }} />
                   Ausgewählte Rotweine
                 </h3>
                 {rotweine.map((wein, idx) => (
