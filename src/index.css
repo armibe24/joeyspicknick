@@ -260,9 +260,7 @@ nav { display: flex; gap: 0.5rem; align-items: center; }
 section, .legal-page { padding: 9rem 2rem 6rem; }
 .section-inner { max-width: 1200px; margin: 0 auto; }
 .section-label { font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; color: var(--accent); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.8rem; }
-.section-label::before { content: ''; width: 25px; height: 3px; background: var(--accent); border-radius: 2px; }
 .section-label.align-center { justify-content: center; }
-.section-label.align-center::before { display: none; }
 .section-title { font-size: clamp(2.3rem, 5vw, 4rem); font-weight: 900; line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 2rem; color: var(--text-main); }
 
 /* ─── HERO WITH LARGE BRAND WATERMARK BACKDROP ─── */
@@ -397,7 +395,7 @@ section, .legal-page { padding: 9rem 2rem 6rem; }
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: stretch; }
 .about-grid-reverse .about-image { order: -1; }
 .about-text p { font-size: 1.15rem; color: rgba(56, 34, 15, 0.8); margin-bottom: 1.8rem; line-height: 1.7; }
-.about-signature { margin-top: 2rem; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 2rem; color: var(--text-main); text-transform: uppercase; letter-spacing: -0.05em; display: inline-block; border-bottom: 2px solid var(--accent); }
+.about-signature { margin-top: 2rem; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 2rem; color: var(--text-main); text-transform: uppercase; letter-spacing: -0.05em; display: inline-block; }
 
 .about-image {
   position: relative;
@@ -615,6 +613,17 @@ section, .legal-page { padding: 9rem 2rem 6rem; }
 .legal-page a { color: var(--accent); text-decoration: underline; font-weight: 700; }
 .legal-page ul { margin: 1rem 0 1.5rem 1.5rem; color: rgba(56, 34, 15, 0.8); }
 .legal-page li { font-size: 1.05rem; line-height: 1.8; margin-bottom: 0.5rem; }
+
+/* ─── 404 PAGE ─── */
+.not-found { padding: 12rem 2rem 8rem; text-align: center; }
+.not-found-code {
+  font-size: clamp(5rem, 18vw, 11rem);
+  font-weight: 900;
+  line-height: 1;
+  color: var(--accent);
+  letter-spacing: -0.04em;
+  margin-bottom: 1rem;
+}
 
 /* ─── FOOTER ─── */
 .footer-modern { background: var(--bg-dark); color: var(--bg-page); padding: 6rem 2rem 3rem; text-align: center; border-top: 4px solid var(--accent); }
