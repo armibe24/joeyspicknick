@@ -254,15 +254,6 @@ nav { display: flex; gap: 0.5rem; align-items: center; }
   display: flex;
   flex-direction: column;
 }
-/* Enhanced dashed line visibility */
-.premium-card::after {
-  content: '';
-  position: absolute;
-  inset: 5px;
-  border: 2px dashed rgba(56, 34, 15, 0.4);
-  border-radius: calc(var(--radius-md) - 4px);
-  pointer-events: none;
-}
 
 /* ─── SECTIONS & PAGES ─── */
 section, .legal-page { padding: 9rem 2rem 6rem; }
@@ -293,15 +284,14 @@ section, .legal-page { padding: 9rem 2rem 6rem; }
 .hero h1 em { font-style: normal; color: var(--accent); }
 .hero p { font-size: 1.2rem; color: rgba(56, 34, 15, 0.85); max-width: 480px; margin-bottom: 3rem; line-height: 1.6; }
 
-/* Large scaled icon watermark positioned lower down (top half visible) */
+/* Subtle centered brand icon watermark behind the hero */
 .hero-watermark {
   position: absolute;
-  bottom: -32%;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  width: 140%;
-  max-width: 1350px;
-  opacity: 0.1;
+  transform: translate(-50%, -50%);
+  width: min(55%, 560px);
+  opacity: 0.05;
   pointer-events: none;
   z-index: 1;
   display: flex;
@@ -379,17 +369,11 @@ section, .legal-page { padding: 9rem 2rem 6rem; }
   stroke: var(--bg-page);
   stroke-width: 2.5;
 }
-.stamp-badge .stamp-ring {
-  fill: none;
-  stroke: var(--bg-page);
-  stroke-width: 1.5;
-}
 .stamp-badge .stamp-text {
   fill: var(--bg-page);
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
-  font-size: 11px;
-  letter-spacing: 0.5px;
+  font-size: 10.5px;
   text-transform: uppercase;
 }
 .stamp-badge .stamp-icon {
@@ -409,18 +393,19 @@ section, .legal-page { padding: 9rem 2rem 6rem; }
 @keyframes scrollMarquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
 /* About grid layout */
-.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: stretch; }
 .about-grid-reverse .about-image { order: -1; }
 .about-text p { font-size: 1.15rem; color: rgba(56, 34, 15, 0.8); margin-bottom: 1.8rem; line-height: 1.7; }
 .about-signature { margin-top: 2rem; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 2rem; color: var(--text-main); text-transform: uppercase; letter-spacing: -0.05em; display: inline-block; border-bottom: 2px solid var(--accent); }
 
 .about-image {
-  aspect-ratio: 4/3;
+  position: relative;
+  min-height: 440px;
   border-radius: var(--radius-md);
   border: 2px solid var(--text-main);
   overflow: hidden;
 }
-.about-image img { width: 100%; height: 100%; object-fit: cover; filter: sepia(5%) contrast(102%); }
+.about-image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: sepia(5%) contrast(102%); }
 
 /* ─── DEDICATED MENU PAGE ─── */
 .menu-tabs {
@@ -466,7 +451,7 @@ section, .legal-page { padding: 9rem 2rem 6rem; }
 
 .menu-card-footer {
   font-size: 0.85rem; color: rgba(56, 34, 15, 0.55);
-  border-top: 1.5px dashed rgba(56, 34, 15, 0.15);
+  border-top: 1.5px solid rgba(56, 34, 15, 0.12);
   padding-top: 1.2rem;
   display: flex; justify-content: space-between;
   font-weight: 700;
@@ -487,7 +472,7 @@ section, .legal-page { padding: 9rem 2rem 6rem; }
 }
 .drink-row {
   display: flex; justify-content: space-between; align-items: baseline;
-  padding: 0.9rem 0; border-bottom: 1px dashed rgba(56, 34, 15, 0.12); gap: 1.5rem;
+  padding: 0.9rem 0; border-bottom: 1px solid rgba(56, 34, 15, 0.1); gap: 1.5rem;
 }
 .drink-row:last-child { border-bottom: none; }
 .drink-name { font-weight: 800; font-size: 1.1rem; }
@@ -587,6 +572,24 @@ section, .legal-page { padding: 9rem 2rem 6rem; }
 }
 
 /* ─── LEGAL PAGES ─── */
+.legal-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--accent);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0;
+  margin-bottom: 2.5rem;
+  transition: color 0.2s, transform 0.2s;
+}
+.legal-back-link:hover { color: var(--text-main); transform: translateX(-3px); }
 .legal-page h1 { font-size: clamp(2.3rem, 5vw, 3.8rem); font-weight: 900; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 0.5rem; }
 .legal-updated { font-size: 0.9rem; color: rgba(56, 34, 15, 0.5); margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 2px solid var(--text-main); }
 .legal-page h2 { font-size: 1.5rem; font-weight: 900; letter-spacing: -0.02em; margin-top: 3rem; margin-bottom: 1rem; color: var(--text-main); }
@@ -605,6 +608,9 @@ section, .legal-page { padding: 9rem 2rem 6rem; }
 .footer-links a, .footer-links button { color: var(--bg-page); text-decoration: none; transition: all 0.3s; opacity: 0.8; border: none; background: none; font-size: 0.9rem; text-transform: uppercase; font-weight: 800; letter-spacing: 0.15em; cursor: pointer; }
 .footer-links a:hover, .footer-links button:hover { opacity: 1; color: var(--accent); }
 .footer-copy { font-size: 0.85rem; color: rgba(244, 241, 234, 0.4); border-top: 1.5px solid rgba(244, 241, 234, 0.15); padding-top: 2rem; max-width: 1200px; margin: 0 auto; }
+.footer-credit { display: block; margin-top: 0.75rem; }
+.footer-credit a { color: var(--accent); text-decoration: none; font-weight: 700; transition: color 0.2s; }
+.footer-credit a:hover { color: var(--bg-page); text-decoration: underline; }
 
 /* ─── COOKIE BANNER ─── */
 .cookie-banner { position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%) translateY(150%); z-index: 9999; background: #fff; color: var(--text-main); padding: 2.5rem; border-radius: var(--radius-md); box-shadow: 0 15px 40px rgba(56, 34, 15, 0.08); transition: transform 0.6s var(--ease); width: 90%; max-width: 900px; border: 2px solid var(--text-main); }

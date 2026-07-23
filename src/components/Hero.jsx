@@ -53,14 +53,18 @@ export default function Hero({ onNavigatePage }) {
               <defs>
                 <path
                   id="stamp-text-path"
-                  d="M59,59 m-43,0 a43,43 0 1,1 86,0 a43,43 0 1,1 -86,0"
+                  d="M59,59 m-41,0 a41,41 0 1,1 82,0 a41,41 0 1,1 -82,0"
                 />
               </defs>
               <circle className="stamp-bg" cx="59" cy="59" r="57" />
-              <circle className="stamp-ring" cx="59" cy="59" r="50" />
               <text className="stamp-text">
-                <textPath href="#stamp-text-path" startOffset="0">
-                  100% Regional · Handgemacht ·&nbsp;
+                <textPath
+                  href="#stamp-text-path"
+                  startOffset="0"
+                  textLength="256"
+                  lengthAdjust="spacing"
+                >
+                  100% Regional · Handgemacht ·
                 </textPath>
               </text>
               <image
