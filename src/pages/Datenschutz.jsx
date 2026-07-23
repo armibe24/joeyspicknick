@@ -31,8 +31,8 @@ export default function Datenschutz({ onBack, onOpenCookieBanner }) {
           Datenschutzerklärung entnehmen.
         </p>
         <p>
-          Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen – zum Beispiel über
-          das Kontaktformular. Andere Daten werden automatisch oder nach Ihrer Einwilligung beim
+          Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen – zum Beispiel per
+          E-Mail. Andere Daten werden automatisch oder nach Ihrer Einwilligung beim
           Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten
           (z. B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser
           Daten erfolgt automatisch, sobald Sie diese Website betreten.
@@ -72,11 +72,11 @@ export default function Datenschutz({ onBack, onOpenCookieBanner }) {
         <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
         <p>
           Joeys Picknick Food Truck<br />
-          Lisa Muster & Max Muster GbR<br />
+          Joel Muster<br />
           Musterstraße 12<br />
           55116 Mainz<br /><br />
           Telefon: <a href="tel:+491701234567">+49 170 123 4567</a><br />
-          E-Mail: <a href="mailto:hallo@joeyspicknick.de">hallo@joeyspicknick.de</a>
+          E-Mail: <a href="mailto:info@joeyspicknick.de">info@joeyspicknick.de</a>
         </p>
         <p>
           Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam
@@ -156,12 +156,11 @@ export default function Datenschutz({ onBack, onOpenCookieBanner }) {
           auf der Startseite ändern.
         </p>
 
-        <h3 className="serif">Kontaktformular</h3>
+        <h3 className="serif">Anfrage per E-Mail</h3>
         <p>
-          Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem
-          Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der
-          Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir
-          nicht ohne Ihre Einwilligung weiter.
+          Wenn Sie uns per E-Mail kontaktieren, werden Ihre Angaben inklusive der von Ihnen dort
+          angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen
+          bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
         </p>
         <p>
           Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern
@@ -172,7 +171,7 @@ export default function Datenschutz({ onBack, onOpenCookieBanner }) {
           DSGVO).
         </p>
         <p>
-          Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns zur
+          Die von Ihnen per E-Mail übermittelten Daten verbleiben bei uns, bis Sie uns zur
           Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die
           Datenspeicherung entfällt. Zwingende gesetzliche Bestimmungen – insbesondere
           Aufbewahrungsfristen – bleiben unberührt.

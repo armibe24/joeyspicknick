@@ -4,7 +4,7 @@
   --bg-beige: #EAE3D5;
   --bg-dark: #2F2116;
   --text-main: #38220F;
-  --accent: #A56336;
+  --accent: #7C5233;
 
   --radius-sm: 8px;
   --radius-md: 12px;
@@ -48,7 +48,7 @@ body {
   filter: brightness(0) invert(1);
 }
 .section-label .site-icon {
-  filter: invert(42%) sepia(30%) saturate(1200%) hue-rotate(345deg) brightness(85%) contrast(95%);
+  filter: invert(34%) sepia(24%) saturate(700%) hue-rotate(350deg) brightness(88%) contrast(90%);
 }
 
 /* ─── DETACHED FLOATING HEADER WITH Crisp INSET BORDER ─── */
@@ -122,9 +122,9 @@ nav { display: flex; gap: 0.5rem; align-items: center; }
   border-radius: 1px;
 }
 
-/* Caramel and Espresso Primary Branding Buttons (No Yellow) */
+/* Warm Brown and Espresso Primary Branding Buttons */
 .btn-primary {
-  background: var(--accent); /* Terracotta / Caramel branding */
+  background: var(--accent); /* Warm brown branding */
   color: var(--bg-page) !important; /* Cream text */
   padding: 0.8rem 1.8rem;
   border-radius: var(--radius-sm);
@@ -137,14 +137,14 @@ nav { display: flex; gap: 0.5rem; align-items: center; }
   display: inline-flex; justify-content: center; align-items: center;
   border: 2px solid var(--text-main);
   cursor: pointer;
-  transition: transform 0.2s cubic-bezier(.175, .885, .32, 1.275), background 0.2s;
+  transition: transform 0.2s ease, background 0.2s;
 }
 .btn-primary:hover {
   background: var(--text-main); /* Espresso on hover */
-  transform: scale(1.04) rotate(-1deg) translateY(-2px);
+  transform: translateY(-2px);
 }
 .btn-primary:active {
-  transform: scale(0.97) rotate(0deg);
+  transform: translateY(0);
 }
 
 /* Dark Button Override for Navigation Anfrage (Better contrast on white header) */
@@ -326,12 +326,12 @@ section, .legal-page { padding: 9rem 2rem 6rem; }
   border-radius: var(--radius-md);
   border: 2px solid var(--text-main);
   overflow: hidden;
-  transform: rotate(-1deg);
+  transform: rotate(0deg);
   transition: transform 0.4s var(--ease);
 }
 .hero-main-img img { width: 100%; height: 100%; object-fit: cover; }
 .hero-main-img:hover {
-  transform: rotate(0deg) scale(1.02);
+  transform: scale(1.02);
 }
 
 .hero-overlay-card {
@@ -343,7 +343,7 @@ section, .legal-page { padding: 9rem 2rem 6rem; }
   padding: 0.8rem 0.8rem 1.8rem;
   border: 2px solid var(--text-main);
   border-radius: 4px;
-  transform: rotate(4deg);
+  transform: rotate(2deg);
   transition: transform 0.4s var(--ease);
 }
 .hero-overlay-card img {
@@ -362,35 +362,38 @@ section, .legal-page { padding: 9rem 2rem 6rem; }
   text-align: center;
 }
 .hero-collage:hover .hero-overlay-card {
-  transform: rotate(-1deg) translateY(-5px);
+  transform: rotate(1deg) translateY(-5px);
 }
 
 .stamp-badge {
   position: absolute;
-  top: -2.5rem;
+  top: -2.8rem;
   right: 0px;
-  width: 110px;
-  height: 110px;
-  background: var(--accent);
-  color: var(--bg-page);
-  border-radius: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.7rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  text-align: center;
-  border: 3px double var(--bg-page);
-  animation: rotateBadge 20s linear infinite;
+  width: 118px;
+  height: 118px;
   z-index: 10;
-  padding: 0.5rem;
 }
-@keyframes rotateBadge {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+.stamp-badge svg { width: 100%; height: 100%; display: block; overflow: visible; }
+.stamp-badge .stamp-bg {
+  fill: var(--accent);
+  stroke: var(--bg-page);
+  stroke-width: 2.5;
+}
+.stamp-badge .stamp-ring {
+  fill: none;
+  stroke: var(--bg-page);
+  stroke-width: 1.5;
+}
+.stamp-badge .stamp-text {
+  fill: var(--bg-page);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.stamp-badge .stamp-icon {
+  filter: brightness(0) invert(1);
 }
 
 /* ─── SCROLLING MARQUEE ─── */
@@ -551,10 +554,10 @@ section, .legal-page { padding: 9rem 2rem 6rem; }
   letter-spacing: 0.05em;
   /* Reverted caption rotation to prevent double-rotation sub-pixel rendering bugs */
 }
-.gallery-tilt-left { transform: rotate(-2.5deg); }
-.gallery-tilt-right { transform: rotate(2.5deg); }
+.gallery-tilt-left { transform: rotate(-1deg); }
+.gallery-tilt-right { transform: rotate(1deg); }
 .gallery-item:hover {
-  transform: scale(1.03) rotate(0deg);
+  transform: scale(1.02) rotate(0deg);
   z-index: 5;
 }
 

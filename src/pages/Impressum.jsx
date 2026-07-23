@@ -17,7 +17,7 @@ export default function Impressum({ onBack }) {
         <h2 className="serif">Angaben gemäß § 5 TMG</h2>
         <p>
           Joeys Picknick Food Truck<br />
-          Lisa Muster & Max Muster GbR<br />
+          Joel Muster<br />
           Musterstraße 12<br />
           55116 Mainz
         </p>
@@ -25,7 +25,7 @@ export default function Impressum({ onBack }) {
         <h2 className="serif">Kontakt</h2>
         <p>
           Telefon: <a href="tel:+491701234567">+49 170 123 4567</a><br />
-          E-Mail: <a href="mailto:hallo@joeyspicknick.de">hallo@joeyspicknick.de</a>
+          E-Mail: <a href="mailto:info@joeyspicknick.de">info@joeyspicknick.de</a>
         </p>
 
         <h2 className="serif">Umsatzsteuer-ID</h2>
@@ -36,7 +36,7 @@ export default function Impressum({ onBack }) {
 
         <h2 className="serif">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
         <p>
-          Lisa Muster & Max Muster<br />
+          Joel Muster<br />
           Musterstraße 12<br />
           55116 Mainz
         </p>

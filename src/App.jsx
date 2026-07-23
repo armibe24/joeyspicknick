@@ -50,7 +50,7 @@ export default function App() {
         {page === 'datenschutz' && <Datenschutz onBack={() => handleNavigatePage('home')} />}
       </div>
 
-      <Footer onNavigate={handleNavigatePage} />
+      <Footer onNavigatePage={handleNavigatePage} />
 
       <CookieBanner
         consentStatus={cookieConsent}

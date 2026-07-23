@@ -15,20 +15,19 @@ export default function About() {
               Gutes Essen braucht keine weiße Tischdecke.
             </h2>
             <p className="about-text-p" style={{ fontSize: '1.05rem', color: 'rgba(56, 34, 15, 0.8)', marginBottom: '1.2rem' }}>
-              Was 2019 als verrückte Idee begann, ist heute unsere Definition von zeitgemäßem Genuss.
-              Wir sind Lisa und Max – zwei Köche mit dem Anspruch, Restaurant-Qualität auf die Straße
-              zu bringen.
+              Was lange nur eine Idee war, wurde 2026 endlich Wirklichkeit. Hinter Joeys Picknick
+              steht Joel – ein Koch mit dem Anspruch, Restaurant-Qualität auf die Straße zu bringen.
             </p>
             <p className="about-text-p" style={{ fontSize: '1.05rem', color: 'rgba(56, 34, 15, 0.8)', marginBottom: '1.5rem' }}>
-              Wir verzichten auf Abkürzungen: Jede Sauce ist handgerührt, jedes Bun frisch gebacken.
-              Wir glauben, dass man Ehrlichkeit schmecken kann.
+              Joel verzichtet auf Abkürzungen: Jede Sauce ist handgerührt, jedes Bun frisch gebacken.
+              Er glaubt, dass man Ehrlichkeit schmecken kann.
             </p>
-            <div className="about-signature">Lisa & Max</div>
+            <div className="about-signature">Joel</div>
           </div>
 
           {/* Straight Rectangular Image */}
           <div className={`about-image fade-in-section ${inView ? 'is-visible' : ''}`}>
-            <img src="/assets/about.png" alt="Chef Lisa und Max bei der Zubereitung" loading="lazy" />
+            <img src="/assets/about.png" alt="Joel bei der Zubereitung" loading="lazy" />
           </div>
         </div>
       </div>
