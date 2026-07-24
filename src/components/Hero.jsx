@@ -20,8 +20,8 @@ export default function Hero({ onNavigatePage }) {
             <br /> fertig gepackt.
           </h1>
           <p>
-            Kompromisslose Qualität, regionale Zutaten und ehrliche Rezepte, die in Erinnerung bleiben.
-            Fertig gepackt, abfahrbereit und an deinem Lieblingsplatz.
+            Wir bieten vorbereitete Picknickkörbe zum direkten Verzehr am Rhein an. Picknickdecken,
+            Kissen, eine Variation an Lebensmitteln und Wein von regionalen Weingütern gehören dazu.
           </p>
           <button
             onClick={() => onNavigatePage('menu')}
@@ -47,9 +47,35 @@ export default function Hero({ onNavigatePage }) {
         
         {/* Asymmetrical visual collage layout */}
         <div className="hero-collage fade-in-section is-visible">
-          {/* Rotating Stamp Badge */}
-          <div className="stamp-badge">
-            <span>100% Regional • Handgemacht •</span>
+          {/* Stamp badge with text curved around the circle */}
+          <div className="stamp-badge" aria-label="100% Regional und Handgemacht">
+            <svg viewBox="0 0 118 118" role="img">
+              <defs>
+                <path
+                  id="stamp-text-path"
+                  d="M59,59 m-41,0 a41,41 0 1,1 82,0 a41,41 0 1,1 -82,0"
+                />
+              </defs>
+              <circle className="stamp-bg" cx="59" cy="59" r="57" />
+              <text className="stamp-text">
+                <textPath
+                  href="#stamp-text-path"
+                  startOffset="0"
+                  textLength="256"
+                  lengthAdjust="spacing"
+                >
+                  100% Regional · Handgemacht ·
+                </textPath>
+              </text>
+              <image
+                className="stamp-icon"
+                href="/assets/icon.svg"
+                x="42"
+                y="42"
+                width="34"
+                height="34"
+              />
+            </svg>
           </div>
 
           {/* Main Visual Image Card */}

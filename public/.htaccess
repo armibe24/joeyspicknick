@@ -1,0 +1,20 @@
+# ─── SPA fallback für React Router (Apache / IONOS) ───
+# Direkte Aufrufe und Reloads von Routen wie /impressum liefern index.html,
+# das Client-seitige Routing übernimmt danach.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Vorhandene Dateien und Verzeichnisse normal ausliefern
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Alles andere auf index.html umleiten (kein Redirect, interne Weiterleitung)
+  RewriteRule ^ /index.html [L]
+</IfModule>
+
+# Fallback, falls mod_rewrite nicht verfügbar ist
+<IfModule mod_negotiation.c>
+  Options -MultiViews
+</IfModule>

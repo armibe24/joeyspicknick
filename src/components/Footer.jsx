@@ -14,7 +14,15 @@ export default function Footer({ onNavigatePage }) {
             Instagram
           </a>
         </div>
-        <div className="footer-copy">© 2026 Joeys Picknick. Alle Rechte vorbehalten.</div>
+        <div className="footer-copy">
+          © 2026 Joeys Picknick. Alle Rechte vorbehalten.
+          <span className="footer-credit">
+            Website by{' '}
+            <a href="https://www.achimbenzel.com/de/" target="_blank" rel="noopener noreferrer">
+              Achim Benzel
+            </a>
+          </span>
+        </div>
       </div>
     </footer>
   );

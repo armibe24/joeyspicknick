@@ -5,7 +5,6 @@ import About from '../components/About';
 import Concept from '../components/Concept';
 import Truck from '../components/Truck';
 import Gallery from '../components/Gallery';
-import Testimonial from '../components/Testimonial';
 
 export default function Home({ onNavigatePage }) {
   return (
@@ -16,8 +15,7 @@ export default function Home({ onNavigatePage }) {
       <Concept />
       <Truck />
       <Gallery />
-      <Testimonial />
-      
+
       {/* Playful Quick Booking CTA banner at the bottom of homepage */}
       <section className="bg-beige" style={{ textAlign: 'center', padding: '6rem 2rem' }}>
         <div className="section-inner">

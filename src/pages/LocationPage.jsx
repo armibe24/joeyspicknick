@@ -17,8 +17,8 @@ export default function LocationPage({ cookieConsent, onAcceptAllCookies }) {
             <div className="section-label align-center">Unser Standort</div>
             <h1 className="section-title serif">Wo du uns findest</h1>
             <p style={{ maxWidth: '600px', margin: '0 auto 3rem', fontSize: '1.1rem', color: 'rgba(56, 34, 15, 0.8)' }}>
-              Unsere feste Base befindet sich in Mainz. Von hier aus starten unsere Picknick-Kisten-Abenteuer.
-              Hol deine Bestellung ab oder finde heraus, an welchen Terminen wir für Events unterwegs sind.
+              Die neue Adresse lautet Am Zoll- und Binnenhafen 16, 55120 Mainz. Wir stehen aktuell jedes
+              Wochenende am Mainzer Zollhafen von 17 – 21 Uhr.
             </p>
           </div>
 
@@ -30,10 +30,10 @@ export default function LocationPage({ cookieConsent, onAcceptAllCookies }) {
                   <MapPin size={22} style={{ color: 'var(--accent)' }} />
                 </div>
                 <div>
-                  <h3 className="serif" style={{ fontSize: '1.25rem', marginBottom: '0.5rem', color: 'var(--bg-page)' }}>Base Koordinaten</h3>
+                  <h3 className="serif" style={{ fontSize: '1.25rem', marginBottom: '0.5rem', color: 'var(--bg-page)' }}>Standort</h3>
                   <p style={{ color: 'rgba(244, 241, 234, 0.8)' }}>
-                    Am Winterhafen 1<br />
-                    55131 Mainz
+                    Am Zoll- und Binnenhafen 16<br />
+                    55120 Mainz
                   </p>
                 </div>
               </div>
@@ -43,10 +43,10 @@ export default function LocationPage({ cookieConsent, onAcceptAllCookies }) {
                   <Clock size={22} style={{ color: 'var(--accent)' }} />
                 </div>
                 <div>
-                  <h3 className="serif" style={{ fontSize: '1.25rem', marginBottom: '0.5rem', color: 'var(--bg-page)' }}>Abholzeiten</h3>
+                  <h3 className="serif" style={{ fontSize: '1.25rem', marginBottom: '0.5rem', color: 'var(--bg-page)' }}>Öffnungszeiten</h3>
                   <p style={{ color: 'rgba(244, 241, 234, 0.8)' }}>
-                    Mittwoch – Sonntag: 11:30 – 19:30 Uhr<br />
-                    Montag & Dienstag: Ruhetag
+                    Jedes Wochenende: 17 – 21 Uhr<br />
+                    am Mainzer Zollhafen
                   </p>
                 </div>
               </div>
@@ -56,10 +56,9 @@ export default function LocationPage({ cookieConsent, onAcceptAllCookies }) {
                   <Calendar size={22} style={{ color: 'var(--accent)' }} />
                 </div>
                 <div>
-                  <h3 className="serif" style={{ fontSize: '1.25rem', marginBottom: '0.5rem', color: 'var(--bg-page)' }}>Saison 2026</h3>
+                  <h3 className="serif" style={{ fontSize: '1.25rem', marginBottom: '0.5rem', color: 'var(--bg-page)' }}>Gut zu wissen</h3>
                   <p style={{ color: 'rgba(244, 241, 234, 0.8)' }}>
-                    April bis Oktober:<br />
-                    Täglich frische Körbe auf Vorbestellung
+                    Kartenzahlung ab 15 € möglich
                   </p>
                 </div>
               </div>
@@ -70,11 +69,11 @@ export default function LocationPage({ cookieConsent, onAcceptAllCookies }) {
               {cookieConsent === 'all' ? (
                 <div className="map-container">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2564.912349012356!2d8.283123456789012!3d50.00012345678901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bd96e382f6e91f%3A0xe5a3c10a1bd6b510!2sAm%20Winterhafen%201%2C%2055131%20Mainz!5e0!3m2!1sde!2sde!4v1700000000000!5m2!1sde!2sde"
+                    src="https://maps.google.com/maps?q=Am%20Zoll-%20und%20Binnenhafen%2016%2C%2055120%20Mainz&z=15&output=embed"
                     allowFullScreen=""
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Joeys Picknick Base Mainz Standortkarte"
+                    title="Joeys Picknick Standort am Mainzer Zollhafen"
                   ></iframe>
                 </div>
               ) : (
