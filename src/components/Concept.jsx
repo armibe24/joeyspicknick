@@ -17,16 +17,12 @@ export default function Concept() {
           <div className={`about-text premium-card fade-in-section ${inView ? 'is-visible' : ''}`}>
             <div className="section-label">Unser Angebot</div>
             <h2 className="section-title serif" style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.6rem)', marginBottom: '1.5rem' }}>
-              Picknick-Körbe für Genießer
+              Unsere Picknickkörbe
             </h2>
             <p className="about-text-p" style={{ fontSize: '1.05rem', color: 'rgba(56, 34, 15, 0.8)', marginBottom: '1.2rem' }}>
-              Wir haben uns auf etwas ganz Besonderes spezialisiert:{' '}
-              <strong>Liebevoll gepackte Picknick-Körbe</strong>. Ob für den spontanen Ausflug ins
-              Grüne oder eine entspannte Mittagspause im Park.
-            </p>
-            <p className="about-text-p" style={{ fontSize: '1.05rem', color: 'rgba(56, 34, 15, 0.8)' }}>
-              Unsere Körbe sind prall gefüllt mit handgemachten Leckereien, frischen, saisonalen Snacks
-              und erfrischenden Drinks. Abholen, Lieblingsplatz suchen und genießen!
+              Die liebevoll bepackten <strong>Picknickkörbe</strong> sind vom Inhalt her für bis zu zwei
+              Personen ausgelegt und gibt es in zwei Kombinationen: <strong>Meenzer</strong> und{' '}
+              <strong>Mediterran</strong>.
             </p>
           </div>
         </div>

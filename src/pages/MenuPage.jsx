@@ -13,59 +13,41 @@ export default function MenuPage() {
 
   const boxen = [
     {
-      id: 'deutsch',
-      title: 'Deutsche Box',
-      price: 'Individuell',
-      items: [
-        'Frische Brezel',
-        'Würziger Spundekäse',
-        'Süße Trauben',
-        'Weißwein oder Traubensaft',
-        'Mineralwasser',
-        'Leckeres Hörnchen',
-        'Fruchtige Marmelade'
-      ],
-      footer: 'Inkl. Korb, Decke, Gläser & Kissen'
+      id: 'meenzer',
+      title: 'Meenzer Box',
+      subtitle: 'für 2 Personen',
+      price: '14,90 €',
+      items: ['Brezeln', 'Spundekäse', 'Käsewürfel', 'Trauben', 'Kekse']
     },
     {
       id: 'mediterran',
       title: 'Mediterrane Box',
-      price: 'Individuell',
-      items: [
-        'Knuspriges Baguette',
-        'Cremiger Feta-Frischkäse',
-        'Eingelegte Oliven',
-        'Weißwein oder Traubensaft',
-        'Mineralwasser',
-        'Süße Kekse'
-      ],
-      footer: 'Inkl. Korb, Decke, Gläser & Kissen'
+      subtitle: 'für 2 Personen',
+      price: '19,90 €',
+      items: ['Fladenbrot', 'Tomate-Feta-Aufstrich', 'Oliven', 'Trauben', 'Kekse']
     },
     {
-      id: 'arabisch',
-      title: 'Arabische Box',
-      price: 'Individuell',
-      items: [
-        'Traditioneller Sesamring',
-        'Hummus & Harissa',
-        'Gefüllte Weinblätter',
-        'Süßes Baklava',
-        'Feine Datteln',
-        'Fruchtiger Traubensaft'
-      ],
-      footer: 'Inkl. Korb, Decke, Gläser & Kissen'
+      id: 'schobbe',
+      title: 'Schobbe Box',
+      subtitle: 'für 2 Personen',
+      price: '14,90 €',
+      items: ['Silvaner und Riesling 0,75l (süffiger Tischwein)', 'Apollinaris Sprudel']
     }
+  ];
+
+  const mitnehmen = [
+    { name: 'Brezel', price: '3,00 €' },
+    { name: 'Brezel mit Spundekäse', price: '5,50 €' }
   ];
 
   const softdrinks = [
     { name: 'fritz-kola', volume: '0,33l', price: '3,00 €', sub: 'Koffeinhaltig' },
     { name: 'fritz-kola super zero', volume: '0,33l', price: '3,00 €', sub: 'Zuckerfrei & Koffeinhaltig' },
     { name: 'fritz-limo orange', volume: '0,33l', price: '3,00 €', sub: 'Fruchtige Orangenlimonade' },
-    { name: 'fritz-spritz bio-rhabarberschorle', volume: '0,33l', price: '3,00 €', sub: 'Erfrischende Bioschorle' },
     { name: 'fritz-spritz bio-apfelschorle', volume: '0,33l', price: '3,00 €', sub: 'Erfrischende Bioschorle' },
     { name: 'fritz-spritz bio-traubenschorle', volume: '0,33l', price: '3,00 €', sub: 'Erfrischende Bioschorle' },
-    { name: 'Wasser Still', volume: '0,33l', price: '2,50 €', sub: 'Natürliches Mineralwasser' },
-    { name: 'Wasser Sprudel', volume: '0,33l', price: '2,50 €', sub: 'Mineralwasser mit Kohlensäure' }
+    { name: 'Vio Still', volume: '0,75l', price: '4,00 €', sub: 'Stilles Mineralwasser' },
+    { name: 'Apollinaris Sprudel', volume: '0,75l', price: '4,00 €', sub: 'Mineralwasser mit Kohlensäure' }
   ];
 
   const biere = [
@@ -73,14 +55,9 @@ export default function MenuPage() {
     { name: 'Alkoholfreies Helles', volume: '0,33l', price: '3,50 €', sub: 'Alkoholfreier Biergenuss' }
   ];
 
-  const weissweine = [
-    { name: 'Weißwein Hausmarke (Wein 1)', volume: '0,33l', price: '7,50 €', sub: 'Trocken & spritzig, perfekt für den Sommer' },
-    { name: 'Weißwein Premium (Wein 2)', volume: '0,33l', price: '7,50 €', sub: 'Feinfruchtig & elegant am Gaumen' }
-  ];
-
-  const rotweine = [
-    { name: 'Rotwein Hausmarke (Wein 1)', volume: '0,33l', price: '7,50 €', sub: 'Kräftig & harmonisch mit Beerenaromen' },
-    { name: 'Rotwein Premium (Wein 2)', volume: '0,33l', price: '7,50 €', sub: 'Vollmundig, samtig & intensiv im Abgang' }
+  const weine = [
+    { name: 'Riesling (halbtrocken)', volume: '0,75l', price: '13,90 €', sub: 'Wein- und Sektgut Ch. W. Bernhard' },
+    { name: 'Spätburgunder Weißherbst (trocken)', volume: '0,75l', price: '13,90 €', sub: 'Wein- und Sektgut Ch. W. Bernhard' }
   ];
 
   return (
@@ -127,7 +104,10 @@ export default function MenuPage() {
                     <div key={box.id} className="menu-card premium-card">
                       <div>
                         <div className="menu-card-header">
-                          <h3 className="menu-card-title serif">{box.title}</h3>
+                          <div className="menu-card-heading">
+                            <h3 className="menu-card-title serif">{box.title}</h3>
+                            <span className="menu-card-subtitle">{box.subtitle}</span>
+                          </div>
                           <span className="menu-card-price">{box.price}</span>
                         </div>
                         <ul className="menu-card-list">
@@ -138,17 +118,29 @@ export default function MenuPage() {
                           ))}
                         </ul>
                       </div>
-                      <div className="menu-card-footer">
-                        <span>{box.footer}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="drinks-list premium-card" style={{ marginTop: '4rem' }}>
+                  <h3 className="drinks-category-title serif">Zum Mitnehmen</h3>
+                  {mitnehmen.map((item, idx) => (
+                    <div key={idx} className="drink-row">
+                      <div className="drink-name-wrap">
+                        <span className="drink-name">{item.name}</span>
+                      </div>
+                      <div className="drink-meta">
+                        <span className="drink-price">{item.price}</span>
                       </div>
                     </div>
                   ))}
                 </div>
 
-                <div className="notice-board">
-                  <strong>Pfand-Hinweis:</strong> Korb, Picknickdecke & Kissen sowie Weingläser und
-                  Verpackungsgläser stellen wir auf Pfandbasis für <strong>20 €</strong> zur Verfügung. Bitte
-                  gib diese anschließend wieder bei uns ab.
+                <div className="notice-board" style={{ marginTop: '3rem' }}>
+                  <strong>Pfand-Hinweis:</strong> Kiste, Picknickdecke &amp; Kissen sowie Weingläser und
+                  Verpackungsgläser auf Pfandbasis – <strong>25 €</strong>, inklusive Lampe – <strong>35 €</strong>.
+                  <br />
+                  Kartenzahlung erst ab 15 € möglich.
                 </div>
               </div>
             )}
@@ -192,9 +184,9 @@ export default function MenuPage() {
             {activeTab === 'weine' && (
               <div className="drinks-list premium-card fade-in-section is-visible">
                 <h3 className="drinks-category-title serif">
-                  Ausgewählte Weißweine
+                  Unsere Weine
                 </h3>
-                {weissweine.map((wein, idx) => (
+                {weine.map((wein, idx) => (
                   <div key={idx} className="drink-row">
                     <div className="drink-name-wrap">
                       <span className="drink-name">{wein.name}</span>
@@ -207,21 +199,9 @@ export default function MenuPage() {
                   </div>
                 ))}
 
-                <h3 className="drinks-category-title serif" style={{ marginTop: '4rem' }}>
-                  Ausgewählte Rotweine
-                </h3>
-                {rotweine.map((wein, idx) => (
-                  <div key={idx} className="drink-row">
-                    <div className="drink-name-wrap">
-                      <span className="drink-name">{wein.name}</span>
-                      <span className="drink-subtext">{wein.sub}</span>
-                    </div>
-                    <div className="drink-meta">
-                      <span className="drink-volume">{wein.volume}</span>
-                      <span className="drink-price">{wein.price}</span>
-                    </div>
-                  </div>
-                ))}
+                <div className="wine-combo-hint">
+                  → Weine in Kombination mit Picknickkorb nur <strong>10,90 €</strong>
+                </div>
               </div>
             )}
           </div>

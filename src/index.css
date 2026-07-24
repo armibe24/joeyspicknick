@@ -439,10 +439,12 @@ section, .legal-page { padding: 9rem 2rem 6rem; }
 }
 
 .menu-card-header {
-  display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1.5rem; gap: 1rem;
+  display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem; gap: 1rem;
 }
-.menu-card-title { font-size: 1.5rem; font-weight: 900; color: var(--text-main); }
-.menu-card-price { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.25rem; color: var(--accent); }
+.menu-card-heading { display: flex; flex-direction: column; gap: 0.25rem; }
+.menu-card-title { font-size: 1.5rem; font-weight: 900; color: var(--text-main); line-height: 1.15; }
+.menu-card-subtitle { font-size: 0.8rem; font-weight: 700; color: rgba(56, 34, 15, 0.55); text-transform: uppercase; letter-spacing: 0.05em; }
+.menu-card-price { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.25rem; color: var(--accent); white-space: nowrap; }
 
 .menu-card-list { list-style: none; margin-bottom: 2.5rem; }
 .menu-card-list li { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.75rem; font-size: 1.05rem; color: rgba(56, 34, 15, 0.85); }
@@ -480,6 +482,17 @@ section, .legal-page { padding: 9rem 2rem 6rem; }
 .drink-meta { display: flex; gap: 1.5rem; align-items: center; font-family: 'Montserrat', sans-serif; }
 .drink-volume { font-size: 0.9rem; color: rgba(56, 34, 15, 0.6); font-weight: 700; }
 .drink-price { font-weight: 800; color: var(--accent); font-size: 1.1rem; }
+.wine-combo-hint {
+  margin-top: 2rem;
+  padding: 1.1rem 1.4rem;
+  background: var(--bg-beige);
+  border-radius: var(--radius-sm);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--text-main);
+}
+.wine-combo-hint strong { color: var(--accent); }
 
 .menu-pdf-container { position: relative; border-radius: var(--radius-md); border: 2px solid var(--text-main); margin-bottom: 3rem; overflow: hidden; aspect-ratio: 210 / 297; width: 100%; max-width: 900px; margin-left: auto; margin-right: auto; }
 .menu-pdf-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }

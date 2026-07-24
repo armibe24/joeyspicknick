@@ -20,8 +20,8 @@ export default function Hero({ onNavigatePage }) {
             <br /> fertig gepackt.
           </h1>
           <p>
-            Kompromisslose Qualität, regionale Zutaten und ehrliche Rezepte, die in Erinnerung bleiben.
-            Fertig gepackt, abfahrbereit und an deinem Lieblingsplatz.
+            Wir bieten vorbereitete Picknickkörbe zum direkten Verzehr am Rhein an. Picknickdecken,
+            Kissen, eine Variation an Lebensmitteln und Wein von regionalen Weingütern gehören dazu.
           </p>
           <button
             onClick={() => onNavigatePage('menu')}
